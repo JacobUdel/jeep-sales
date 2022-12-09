@@ -1,0 +1,5 @@
+package com.promeniotech.jeep.controller.support;
+
+public class FetchJeepTestSupport extends BaseTest {
+
+}

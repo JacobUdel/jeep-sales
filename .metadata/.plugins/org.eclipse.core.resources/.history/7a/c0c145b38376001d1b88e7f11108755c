@@ -1,0 +1,11 @@
+package com.promenio.jeep.controller;
+
+import java.util.List;
+
+import com.promeniotech.jeep.entity.Jeep;
+
+@OpenAPIDefinition(info = @Info(title = "Jeep Sales Service"), servers = {@Server(url = "http://localhost:8080", description = "Local server.")})
+
+public interface JeepSalesController {
+	List<Jeep> fetchJeeps(String model, String trim);
+}

@@ -1,0 +1,5 @@
+package com.promeniotech.jeep.entity;
+
+public enum JeepModel {
+
+}
