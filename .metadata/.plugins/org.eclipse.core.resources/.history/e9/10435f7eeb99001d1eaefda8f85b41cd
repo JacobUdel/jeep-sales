@@ -1,0 +1,54 @@
+package com.promineotech.sar_dogs.controller;
+
+import java.util.List;
+
+import com.promineotech.sar_dogs.entity.Handler;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.servers.Server;
+
+@OpenAPIDefinition(info = @Info(title = "Sar Dogs Service"), servers = {@Server(url = "http://localhost:8080", description = "Local server.")})
+public interface sar_dogsController {
+	
+	// @formatter:off
+	@Operation(
+			summary = "Returns a list of Handlers",
+			description = "Returns a list of Handlers given a lastname and firstname",
+			responses = {
+					@ApiResponse(
+							responseCode = "200", 
+							description = "A list of Handlers is returned", 
+							content = @Content(
+									mediaType = "application/json", 
+									schema = @Schema(implementation = Handler.class))),
+					@ApiResponse(
+							responseCode = "400", 
+							description = "The request parameters are invalid", 
+							content = @Content(
+									mediaType = "application/json")),
+					@ApiResponse(
+							responseCode = "404", 
+							description = "No Handlers were found with the input critera", 
+							content = @Content(
+									mediaType = "application/json")),
+					@ApiResponse(
+							responseCode = "500", 
+							description = "An unplanned error occured", 
+							content = @Content(
+									mediaType = "application/json"))
+			},
+			parameters = {
+					@Parameter(name = "lastName", allowEmptyValue = false, required = false, description = "Last name"),
+					@Parameter(name = "firstName", allowEmptyValue = false, description = "First name")
+			}
+		)
+	// @formatter:on
+	
+	List<Handler> fetchHandler(String lastName, String firstName);
+}

@@ -1,0 +1,13 @@
+package com.promineotech.sar_dogs.controller;
+
+import java.util.List;
+
+import com.promineotech.sar_dogs.entity.Handler;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.servers.Server;
+@OpenAPIDefinition(info = @Info(title = "Sar Dogs Service"), servers = {@Server(url = "http://localhost:8080", description = "Local server.")})
+public interface sar_dogsController {
+	List<Handler> fetchHandler(String lastName, String firstName);
+}

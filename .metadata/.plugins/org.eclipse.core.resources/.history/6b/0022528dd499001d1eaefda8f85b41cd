@@ -1,0 +1,28 @@
+package com.promineotech.sar_dogs.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+
+import com.promineotech.sar_dogs.controller.support.fetchHandlerSupport;
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+class fetchHandler extends fetchHandlerSupport {
+
+	@Test
+	void testThatAHandlerIsReturnedWhenAFirstAndLastNameAreProvided() {
+		//System.out.println(getBaseUri());
+		
+		// Given a valid Lastname, Firstname, and URI
+		String lastName = "Ableton";
+		String firstName = "Abe";
+		String uri = String.format("%s?lastName=%s&firstName=%s", getBaseUri(), lastName, firstName);
+		System.out.println(uri);
+		
+		// When a connection is made to the URI
+		getRestTemplate().getForEntity(uri, Handler.class)
+		// Then a success (OK = 200) status code is returned
+	}
+
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="fetchHandler" project="sar_dogs" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.promineotech.sar_dogs.controller.fetchHandler" time="0.611" displayname="fetchHandler" uniqueid="[engine:junit-jupiter]/[class:com.promineotech.sar_dogs.controller.fetchHandler]">
+    <testcase name="testThatAHandlerIsReturnedWhenAFirstAndLastNameAreProvided" classname="com.promineotech.sar_dogs.controller.fetchHandler" time="0.611" displayname="testThatAHandlerIsReturnedWhenAFirstAndLastNameAreProvided()" uniqueid="[engine:junit-jupiter]/[class:com.promineotech.sar_dogs.controller.fetchHandler]/[method:testThatAHandlerIsReturnedWhenAFirstAndLastNameAreProvided()]"/>
+  </testsuite>
+</testrun>

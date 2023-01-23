@@ -1,0 +1,12 @@
+package com.promineotech.sar_dogs.controller.support;
+
+import java.util.List;
+
+import com.promineotech.sar_dogs.entity.Handler;
+
+public class fetchHandlerSupport extends baseTest {
+	protected List<Handler> buildExpected() {
+		List<Handler> list = new LinkedList<> ();
+		return list;
+	}
+}

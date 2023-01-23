@@ -1,0 +1,17 @@
+package com.promineotech.sar_dogs.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.promineotech.sar_dogs.entity.Handler;
+@RestController
+public class BasicSar_DogsController implements sar_dogsController {
+
+	@Override
+	public List<Handler> fetchHandler(String lastName, String firstName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

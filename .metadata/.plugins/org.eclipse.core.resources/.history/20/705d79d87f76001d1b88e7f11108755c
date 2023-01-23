@@ -1,5 +1,0 @@
-package com.promenio.jeep.controller;
-
-public interface JeepSalesController {
-
-}

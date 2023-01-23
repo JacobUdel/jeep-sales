@@ -1,0 +1,11 @@
+package com.promineotech.sar_dogs.controller.support;
+
+import org.springframework.boot.web.server.LocalServerPort;
+
+public class baseTest {
+	@LocalServerPort 
+	private int serverPort; 
+	protected getBaseUri() {
+		return String.format("http://localhost:%d/sar_dogs", serverPort);
+	}
+}
